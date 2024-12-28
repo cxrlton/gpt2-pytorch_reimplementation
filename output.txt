@@ -1,0 +1,270 @@
+⚡ ~ python3 gpt2.py
+Using device: cuda
+total desired batch size: 524288
+=> calculated gradient accumulation steps: 128
+Loaded 338025 tokens
+1 epoch = 82 batches
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+using fused AdamW: True
+step    0 |  loss: 10.939035 | lr 6.0000e-05 | norm: 17.0027 | dt: 6.62 ms, tokens/sec: 79167.67
+step    1 |  loss: 9.595484 | lr 1.2000e-04 | norm: 8.4141 | dt: 4.88 ms, tokens/sec: 107450.20
+step    2 |  loss: 9.371121 | lr 1.8000e-04 | norm: 5.0848 | dt: 4.85 ms, tokens/sec: 108147.87
+step    3 |  loss: 9.242250 | lr 2.4000e-04 | norm: 4.1983 | dt: 4.84 ms, tokens/sec: 108266.56
+step    4 |  loss: 9.272597 | lr 3.0000e-04 | norm: 4.2695 | dt: 4.78 ms, tokens/sec: 109783.21
+step    5 |  loss: 9.204900 | lr 3.6000e-04 | norm: 3.8707 | dt: 4.78 ms, tokens/sec: 109765.77
+step    6 |  loss: 9.141921 | lr 4.2000e-04 | norm: 4.0050 | dt: 4.77 ms, tokens/sec: 109800.29
+step    7 |  loss: 9.059484 | lr 4.8000e-04 | norm: 4.0151 | dt: 4.77 ms, tokens/sec: 109805.74
+step    8 |  loss: 8.946672 | lr 5.4000e-04 | norm: 4.0280 | dt: 4.77 ms, tokens/sec: 109850.22
+step    9 |  loss: 8.835742 | lr 6.0000e-04 | norm: 4.0068 | dt: 4.77 ms, tokens/sec: 109831.76
+step   10 |  loss: 8.694489 | lr 6.0000e-04 | norm: 4.0508 | dt: 4.77 ms, tokens/sec: 109843.29
+step   11 |  loss: 8.598418 | lr 5.9917e-04 | norm: 4.0034 | dt: 4.78 ms, tokens/sec: 109687.07
+step   12 |  loss: 8.484540 | lr 5.9668e-04 | norm: 4.0641 | dt: 4.78 ms, tokens/sec: 109681.16
+step   13 |  loss: 8.418775 | lr 5.9254e-04 | norm: 4.0178 | dt: 4.78 ms, tokens/sec: 109617.57
+step   14 |  loss: 8.348978 | lr 5.8679e-04 | norm: 4.0476 | dt: 4.78 ms, tokens/sec: 109626.60
+step   15 |  loss: 8.292096 | lr 5.7945e-04 | norm: 4.0533 | dt: 4.78 ms, tokens/sec: 109580.58
+step   16 |  loss: 8.260771 | lr 5.7057e-04 | norm: 4.0495 | dt: 4.78 ms, tokens/sec: 109584.51
+step   17 |  loss: 8.217182 | lr 5.6021e-04 | norm: 4.0819 | dt: 4.79 ms, tokens/sec: 109475.59
+step   18 |  loss: 8.208569 | lr 5.4843e-04 | norm: 4.0378 | dt: 4.79 ms, tokens/sec: 109492.90
+step   19 |  loss: 8.168161 | lr 5.3531e-04 | norm: 4.1045 | dt: 4.79 ms, tokens/sec: 109384.16
+step   20 |  loss: 8.170773 | lr 5.2092e-04 | norm: 4.0476 | dt: 4.80 ms, tokens/sec: 109271.80
+step   21 |  loss: 8.144153 | lr 5.0535e-04 | norm: 4.0959 | dt: 4.80 ms, tokens/sec: 109142.24
+step   22 |  loss: 8.136056 | lr 4.8870e-04 | norm: 4.0741 | dt: 4.81 ms, tokens/sec: 109055.43
+step   23 |  loss: 8.125661 | lr 4.7107e-04 | norm: 4.0942 | dt: 4.84 ms, tokens/sec: 108411.95
+step   24 |  loss: 8.109076 | lr 4.5258e-04 | norm: 4.1061 | dt: 4.81 ms, tokens/sec: 108965.83
+step   25 |  loss: 8.111198 | lr 4.3332e-04 | norm: 4.0867 | dt: 4.81 ms, tokens/sec: 108939.54
+step   26 |  loss: 8.087632 | lr 4.1343e-04 | norm: 4.1346 | dt: 4.82 ms, tokens/sec: 108811.06
+step   27 |  loss: 8.099336 | lr 3.9303e-04 | norm: 4.0815 | dt: 4.82 ms, tokens/sec: 108817.42
+step   28 |  loss: 8.071498 | lr 3.7224e-04 | norm: 4.1502 | dt: 4.85 ms, tokens/sec: 108163.81
+step   29 |  loss: 8.083201 | lr 3.5118e-04 | norm: 4.0955 | dt: 4.88 ms, tokens/sec: 107529.82
+step   30 |  loss: 8.070222 | lr 3.3000e-04 | norm: 4.1262 | dt: 4.82 ms, tokens/sec: 108809.14
+step   31 |  loss: 8.061124 | lr 3.0882e-04 | norm: 4.1297 | dt: 4.82 ms, tokens/sec: 108742.43
+step   32 |  loss: 8.061885 | lr 2.8776e-04 | norm: 4.1291 | dt: 4.83 ms, tokens/sec: 108462.62
+step   33 |  loss: 8.048007 | lr 2.6697e-04 | norm: 4.1546 | dt: 4.83 ms, tokens/sec: 108655.05
+step   34 |  loss: 8.057941 | lr 2.4657e-04 | norm: 4.1166 | dt: 4.83 ms, tokens/sec: 108627.58
+step   35 |  loss: 8.034495 | lr 2.2668e-04 | norm: 4.1721 | dt: 4.83 ms, tokens/sec: 108587.57
+step   36 |  loss: 8.049837 | lr 2.0742e-04 | norm: 4.1172 | dt: 4.83 ms, tokens/sec: 108609.05
+step   37 |  loss: 8.030981 | lr 1.8893e-04 | norm: 4.1713 | dt: 4.83 ms, tokens/sec: 108567.55
+step   38 |  loss: 8.036953 | lr 1.7130e-04 | norm: 4.1337 | dt: 4.82 ms, tokens/sec: 108697.65
+step   39 |  loss: 8.035136 | lr 1.5465e-04 | norm: 4.1550 | dt: 4.82 ms, tokens/sec: 108746.27
+step   40 |  loss: 8.024358 | lr 1.3908e-04 | norm: 4.1619 | dt: 4.82 ms, tokens/sec: 108798.49
+step   41 |  loss: 8.032418 | lr 1.2469e-04 | norm: 4.1437 | dt: 4.82 ms, tokens/sec: 108846.14
+step   42 |  loss: 8.016789 | lr 1.1157e-04 | norm: 4.1873 | dt: 4.81 ms, tokens/sec: 108893.81
+step   43 |  loss: 8.033298 | lr 9.9787e-05 | norm: 4.1319 | dt: 4.81 ms, tokens/sec: 108952.62
+step   44 |  loss: 8.010695 | lr 8.9428e-05 | norm: 4.1938 | dt: 4.81 ms, tokens/sec: 108937.12
+step   45 |  loss: 8.029776 | lr 8.0553e-05 | norm: 4.1364 | dt: 4.81 ms, tokens/sec: 109001.73
+step   46 |  loss: 8.020321 | lr 7.3215e-05 | norm: 4.1685 | dt: 4.81 ms, tokens/sec: 108899.43
+step   47 |  loss: 8.018271 | lr 6.7460e-05 | norm: 4.1571 | dt: 4.81 ms, tokens/sec: 108918.39
+step   48 |  loss: 8.018682 | lr 6.3324e-05 | norm: 4.1667 | dt: 4.81 ms, tokens/sec: 108949.85
+step   49 |  loss: 8.011611 | lr 6.0832e-05 | norm: 4.1772 | dt: 4.82 ms, tokens/sec: 108807.04
+
+
+
+
+⚡ ~ python3 gpt2_cuda.py
+Using device: cuda
+total desired batch size: 524288
+=> calculated gradient accumulation steps: 64
+Loaded 338025 tokens
+1 epoch = 41 batches
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+using fused AdamW: True
+step    0 |  loss: 10.939034 | lr 6.0000e-05 | norm: 17.0027 | dt: 6.05 ms, tokens/sec: 86730.11
+step    1 |  loss: 9.595478 | lr 1.2000e-04 | norm: 8.2481 | dt: 4.43 ms, tokens/sec: 118321.45
+step    2 |  loss: 9.374112 | lr 1.8000e-04 | norm: 5.4146 | dt: 4.43 ms, tokens/sec: 118430.23
+step    3 |  loss: 9.258943 | lr 2.4000e-04 | norm: 4.7615 | dt: 4.42 ms, tokens/sec: 118560.13
+step    4 |  loss: 9.406352 | lr 3.0000e-04 | norm: 5.3376 | dt: 4.43 ms, tokens/sec: 118377.73
+step    5 |  loss: 9.333632 | lr 3.6000e-04 | norm: 4.0315 | dt: 4.42 ms, tokens/sec: 118655.76
+step    6 |  loss: 9.309744 | lr 4.2000e-04 | norm: 4.1643 | dt: 4.42 ms, tokens/sec: 118504.90
+step    7 |  loss: 9.304698 | lr 4.8000e-04 | norm: 4.1054 | dt: 4.42 ms, tokens/sec: 118725.56
+step    8 |  loss: 9.261453 | lr 5.4000e-04 | norm: 4.0269 | dt: 4.41 ms, tokens/sec: 118800.47
+step    9 |  loss: 9.203290 | lr 6.0000e-04 | norm: 4.0040 | dt: 4.41 ms, tokens/sec: 118809.75
+step   10 |  loss: 9.098730 | lr 6.0000e-04 | norm: 4.0467 | dt: 4.42 ms, tokens/sec: 118682.54
+step   11 |  loss: 9.013497 | lr 5.9917e-04 | norm: 3.9981 | dt: 4.42 ms, tokens/sec: 118538.26
+step   12 |  loss: 8.903054 | lr 5.9668e-04 | norm: 4.0576 | dt: 4.42 ms, tokens/sec: 118581.37
+step   13 |  loss: 8.825026 | lr 5.9254e-04 | norm: 4.0102 | dt: 4.43 ms, tokens/sec: 118452.03
+step   14 |  loss: 8.744465 | lr 5.8679e-04 | norm: 4.0388 | dt: 4.43 ms, tokens/sec: 118368.44
+step   15 |  loss: 8.674563 | lr 5.7945e-04 | norm: 4.0434 | dt: 4.43 ms, tokens/sec: 118343.03
+step   16 |  loss: 8.626690 | lr 5.7057e-04 | norm: 4.0385 | dt: 4.42 ms, tokens/sec: 118486.29
+step   17 |  loss: 8.572361 | lr 5.6021e-04 | norm: 4.0699 | dt: 4.43 ms, tokens/sec: 118469.90
+step   18 |  loss: 8.549432 | lr 5.4843e-04 | norm: 4.0248 | dt: 4.43 ms, tokens/sec: 118440.14
+step   19 |  loss: 8.505005 | lr 5.3531e-04 | norm: 4.0904 | dt: 4.42 ms, tokens/sec: 118562.08
+step   20 |  loss: 8.496009 | lr 5.2092e-04 | norm: 4.0329 | dt: 4.42 ms, tokens/sec: 118491.13
+step   21 |  loss: 8.467546 | lr 5.0535e-04 | norm: 4.0801 | dt: 4.43 ms, tokens/sec: 118472.57
+step   22 |  loss: 8.454165 | lr 4.8870e-04 | norm: 4.0578 | dt: 4.43 ms, tokens/sec: 118386.89
+step   23 |  loss: 8.441773 | lr 4.7107e-04 | norm: 4.0771 | dt: 4.43 ms, tokens/sec: 118322.20
+step   24 |  loss: 8.424270 | lr 4.5258e-04 | norm: 4.0883 | dt: 4.43 ms, tokens/sec: 118357.25
+step   25 |  loss: 8.422475 | lr 4.3332e-04 | norm: 4.0682 | dt: 4.43 ms, tokens/sec: 118422.92
+step   26 |  loss: 8.401471 | lr 4.1343e-04 | norm: 4.1152 | dt: 4.43 ms, tokens/sec: 118349.73
+step   27 |  loss: 8.408038 | lr 3.9303e-04 | norm: 4.0619 | dt: 4.43 ms, tokens/sec: 118302.01
+step   28 |  loss: 8.385260 | lr 3.7224e-04 | norm: 4.1299 | dt: 4.43 ms, tokens/sec: 118237.67
+step   29 |  loss: 8.390689 | lr 3.5118e-04 | norm: 4.0751 | dt: 4.44 ms, tokens/sec: 118183.68
+step   30 |  loss: 8.380563 | lr 3.3000e-04 | norm: 4.1053 | dt: 4.44 ms, tokens/sec: 118080.50
+step   31 |  loss: 8.371390 | lr 3.0882e-04 | norm: 4.1083 | dt: 4.44 ms, tokens/sec: 118051.38
+step   32 |  loss: 8.371857 | lr 2.8776e-04 | norm: 4.1074 | dt: 4.44 ms, tokens/sec: 118033.15
+step   33 |  loss: 8.358665 | lr 2.6697e-04 | norm: 4.1325 | dt: 4.46 ms, tokens/sec: 117652.37
+step   34 |  loss: 8.366453 | lr 2.4657e-04 | norm: 4.0943 | dt: 4.45 ms, tokens/sec: 117874.43
+step   35 |  loss: 8.348969 | lr 2.2668e-04 | norm: 4.1494 | dt: 4.46 ms, tokens/sec: 117574.93
+step   36 |  loss: 8.358907 | lr 2.0742e-04 | norm: 4.0947 | dt: 4.46 ms, tokens/sec: 117618.19
+step   37 |  loss: 8.343243 | lr 1.8893e-04 | norm: 4.1484 | dt: 4.46 ms, tokens/sec: 117577.85
+step   38 |  loss: 8.347617 | lr 1.7130e-04 | norm: 4.1109 | dt: 4.46 ms, tokens/sec: 117673.33
+step   39 |  loss: 8.344298 | lr 1.5465e-04 | norm: 4.1317 | dt: 4.46 ms, tokens/sec: 117594.60
+step   40 |  loss: 8.336204 | lr 1.3908e-04 | norm: 4.1386 | dt: 4.46 ms, tokens/sec: 117539.76
+step   41 |  loss: 8.342804 | lr 1.2469e-04 | norm: 4.1203 | dt: 4.46 ms, tokens/sec: 117517.40
+step   42 |  loss: 8.329602 | lr 1.1157e-04 | norm:
+.41
+step   43 |  loss: 8.341426 | lr 9.9787e-05 | norm: 4.1081 | dt: 4.46 ms, tokens/sec: 117576.99
+step   44 |  loss: 8.323667 | lr 8.9428e-05 | norm: 4.1698 | dt: 4.46 ms, tokens/sec: 117573.41
+step   45 |  loss: 8.336548 | lr 8.0553e-05 | norm: 4.1126 | dt: 4.46 ms, tokens/sec: 117618.76
+step   46 |  loss: 8.330783 | lr 7.3215e-05 | norm: 4.1445 | dt: 4.46 ms, tokens/sec: 117663.12
+step   47 |  loss: 8.326590 | lr 6.7460e-05 | norm: 4.1331 | dt: 4.45 ms, tokens/sec: 117689.45
+step   48 |  loss: 8.331903 | lr 6.3324e-05 | norm: 4.1426 | dt: 4.46 ms, tokens/sec: 117613.75
+step   49 |  loss: 8.324569 | lr 6.0832e-05 | norm: 4.1530 | dt: 4.45 ms, tokens/sec: 117745.35
+⚡ ~ 
+
+
+⚡ ~ nvidia-smi 
+Sat Dec 28 05:41:01 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.216.03             Driver Version: 535.216.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA L40S                    Off | 00000000:38:00.0 Off |                    0 |
+| N/A   26C    P8              31W / 350W |      0MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA L40S                    Off | 00000000:3A:00.0 Off |                    0 |
+| N/A   25C    P8              31W / 350W |      0MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA L40S                    Off | 00000000:3C:00.0 Off |                    0 |
+| N/A   23C    P8              30W / 350W |      0MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA L40S                    Off | 00000000:3E:00.0 Off |                    0 |
+| N/A   25C    P8              32W / 350W |      0MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+
+
+⚡ ~ torchrun --standalone --nproc_per_node=4 gpt2_cuda.py
+W1228 07:43:52.758000 330637 /system/conda/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/distributed/run.py:793] 
+W1228 07:43:52.758000 330637 /system/conda/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/distributed/run.py:793] *****************************************
+W1228 07:43:52.758000 330637 /system/conda/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1228 07:43:52.758000 330637 /system/conda/miniconda3/envs/cloudspace/lib/python3.10/site-packages/torch/distributed/run.py:793] *****************************************
+total desired batch size: 524288
+=> calculated gradient accumulation steps: 16
+loaded 338025 tokens
+loaded 338025 tokens
+loaded 338025 tokens
+loaded 338025 tokens
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+using fused AdamW: True
+using fused AdamW: True
+using fused AdamW: True
+num decayed parameter tensors: 50, with 124354560 parameters
+num non-decayed parameter tensors: 98, with 121344 parameters
+using fused AdamW: True
+step    0 |  loss: 10.938059 | lr 6.0000e-05 | norm: 27.3735 | dt: 14.56 ms, tokens/sec: 36003.01
+step    1 |  loss: 9.655858 | lr 1.2000e-04 | norm: 9.5453 | dt: 1.08 ms, tokens/sec: 483988.23
+step    2 |  loss: 9.208000 | lr 1.8000e-04 | norm: 5.3805 | dt: 1.08 ms, tokens/sec: 484670.61
+step    3 |  loss: 9.800888 | lr 2.4000e-04 | norm: 8.5402 | dt: 1.08 ms, tokens/sec: 484893.22
+step    4 |  loss: 9.178390 | lr 3.0000e-04 | norm: 4.3414 | dt: 1.08 ms, tokens/sec: 485661.06
+step    5 |  loss: 8.655576 | lr 3.6000e-04 | norm: 3.6578 | dt: 1.08 ms, tokens/sec: 486523.46
+step    6 |  loss: 8.292582 | lr 4.2000e-04 | norm: 1.9843 | dt: 1.08 ms, tokens/sec: 486700.16
+step    7 |  loss: 8.018528 | lr 4.8000e-04 | norm: 2.6014 | dt: 1.08 ms, tokens/sec: 485796.35
+step    8 |  loss: 7.682065 | lr 5.4000e-04 | norm: 2.0788 | dt: 1.08 ms, tokens/sec: 486079.41
+step    9 |  loss: 7.306732 | lr 6.0000e-04 | norm: 1.8519 | dt: 1.08 ms, tokens/sec: 485985.63
+step   10 |  loss: 6.968140 | lr 6.0000e-04 | norm: 1.7393 | dt: 1.08 ms, tokens/sec: 485065.96
+step   11 |  loss: 6.678958 | lr 5.9917e-04 | norm: 1.4596 | dt: 1.08 ms, tokens/sec: 484990.43
+step   12 |  loss: 6.449171 | lr 5.9668e-04 | norm: 1.0863 | dt: 1.08 ms, tokens/sec: 483645.15
+step   13 |  loss: 6.311194 | lr 5.9254e-04 | norm: 1.3516 | dt: 1.08 ms, tokens/sec: 483956.59
+step   14 |  loss: 6.203285 | lr 5.8679e-04 | norm: 1.1028 | dt: 1.09 ms, tokens/sec: 482691.82
+step   15 |  loss: 6.168197 | lr 5.7945e-04 | norm: 1.3685 | dt: 1.09 ms, tokens/sec: 479505.40
+step   16 |  loss: 6.137363 | lr 5.7057e-04 | norm: 1.4128 | dt: 1.09 ms, tokens/sec: 481940.10
+step   17 |  loss: 6.122662 | lr 5.6021e-04 | norm: 0.8887 | dt: 1.10 ms, tokens/sec: 477983.07
+step   18 |  loss: 6.082400 | lr 5.4843e-04 | norm: 0.8612 | dt: 1.09 ms, tokens/sec: 479233.39
+step   19 |  loss: 6.063502 | lr 5.3531e-04 | norm: 2.4365 | dt: 1.09 ms, tokens/sec: 482102.07
+step   20 |  loss: 6.046951 | lr 5.2092e-04 | norm: 1.6847 | dt: 1.09 ms, tokens/sec: 479887.97
+step   21 |  loss: 6.015660 | lr 5.0535e-04 | norm: 1.1958 | dt: 1.09 ms, tokens/sec: 482096.04
+step   22 |  loss: 5.981854 | lr 4.8870e-04 | norm: 0.9844 | dt: 1.10 ms, tokens/sec: 478574.76
+step   23 |  loss: 5.943195 | lr 4.7107e-04 | norm: 0.6545 | dt: 1.10 ms, tokens/sec: 477447.05
+step   24 |  loss: 5.920334 | lr 4.5258e-04 | norm: 0.7960 | dt: 1.10 ms, tokens/sec: 478278.52
+step   25 |  loss: 5.892465 | lr 4.3332e-04 | norm: 0.7948 | dt: 1.09 ms, tokens/sec: 480791.66
+step   26 |  loss: 5.885157 | lr 4.1343e-04 | norm: 0.4853 | dt: 1.10 ms, tokens/sec: 478722.70
+step   27 |  loss: 5.871205 | lr 3.9303e-04 | norm: 0.4651 | dt: 1.09 ms, tokens/sec: 479366.79
+step   28 |  loss: 5.849679 | lr 3.7224e-04 | norm: 0.4807 | dt: 1.09 ms, tokens/sec: 481866.38
+step   29 |  loss: 5.835714 | lr 3.5118e-04 | norm: 0.3510 | dt: 1.10 ms, tokens/sec: 478771.17
+step   30 |  loss: 5.835781 | lr 3.3000e-04 | norm: 0.4151 | dt: 1.10 ms, tokens/sec: 478571.84
+step   31 |  loss: 5.827522 | lr 3.0882e-04 | norm: 0.4035 | dt: 1.09 ms, tokens/sec: 480325.70
+step   32 |  loss: 5.816237 | lr 2.8776e-04 | norm: 0.3377 | dt: 1.10 ms, tokens/sec: 478666.74
+step   33 |  loss: 5.801998 | lr 2.6697e-04 | norm: 0.3135 | dt: 1.10 ms, tokens/sec: 477468.41
+step   34 |  loss: 5.788014 | lr 2.4657e-04 | norm: 0.4094 | dt: 1.10 ms, tokens/sec: 477560.49
+step   35 |  loss: 5.794732 | lr 2.2668e-04 | norm: 0.3214 | dt: 1.10 ms, tokens/sec: 477375.85
+step   36 |  loss: 5.779446 | lr 2.0742e-04 | norm: 0.3064 | dt: 1.10 ms, tokens/sec: 476413.09
+step   37 |  loss: 5.772931 | lr 1.8893e-04 | norm: 0.2974 | dt: 1.10 ms, tokens/sec: 476676.02
+step   38 |  loss: 5.761335 | lr 1.7130e-04 | norm: 0.2790 | dt: 1.10 ms, tokens/sec: 476432.29
+step   39 |  loss: 5.758797 | lr 1.5465e-04 | norm: 0.2085 | dt: 1.10 ms, tokens/sec: 475733.37
+step   40 |  loss: 5.759083 | lr 1.3908e-04 | norm: 0.2417 | dt: 1.10 ms, tokens/sec: 476327.75
+step   41 |  loss: 5.747663 | lr 1.2469e-04 | norm: 0.3549 | dt: 1.10 ms, tokens/sec: 476613.93
+step   42 |  loss: 5.747558 | lr 1.1157e-04 | norm: 0.2566 | dt: 1.10 ms, tokens/sec: 476423.00
+step   43 |  loss: 5.732539 | lr 9.9787e-05 | norm: 0.1848 | dt: 1.10 ms, tokens/sec: 476240.68
+step   44 |  loss: 5.739765 | lr 8.9428e-05 | norm: 0.2091 | dt: 1.10 ms, tokens/sec: 476037.69
+step   45 |  loss: 5.731620 | lr 8.0553e-05 | norm: 0.2444 | dt: 1.10 ms, tokens/sec: 477448.82
+step   46 |  loss: 5.722606 | lr 7.3215e-05 | norm: 0.2225 | dt: 1.10 ms, tokens/sec: 476542.04
+step   47 |  loss: 5.723363 | lr 6.7460e-05 | norm: 0.2050 | dt: 1.10 ms, tokens/sec: 476544.62
+step   48 |  loss: 5.718341 | lr 6.3324e-05 | norm: 0.2057 | dt: 1.10 ms, tokens/sec: 476080.56
+step   49 |  loss: 5.716745 | lr 6.0832e-05 | norm: 0.2204 | dt: 1.10 ms, tokens/sec: 476265.75
+
+
+step  390 |  loss: 5.889500 | lr 3.2811e-04 | norm: 0.7141 | dt: 1.31 ms, tokens/sec: 400415.68
+step  391 |  loss: 5.908506 | lr 3.2895e-04 | norm: 0.6897 | dt: 1.31 ms, tokens/sec: 399553.04
+step  392 |  loss: 5.856593 | lr 3.2979e-04 | norm: 0.6536 | dt: 1.31 ms, tokens/sec: 400348.61
+step  393 |  loss: 5.920473 | lr 3.3063e-04 | norm: 0.6915 | dt: 1.32 ms, tokens/sec: 397932.81
+step  394 |  loss: 5.807130 | lr 3.3147e-04 | norm: 0.7084 | dt: 1.32 ms, tokens/sec: 397991.65
+step  395 |  loss: 5.798845 | lr 3.3231e-04 | norm: 0.8643 | dt: 1.32 ms, tokens/sec: 397558.28
+step  396 |  loss: 5.827131 | lr 3.3315e-04 | norm: 0.8047 | dt: 1.32 ms, tokens/sec: 398604.93
+step  397 |  loss: 5.808306 | lr 3.3399e-04 | norm: 0.6657 | dt: 1.32 ms, tokens/sec: 398604.28
+step  398 |  loss: 5.817492 | lr 3.3483e-04 | norm: 0.6558 | dt: 1.32 ms, tokens/sec: 396486.37
+step  399 |  loss: 5.836348 | lr 3.3566e-04 | norm: 0.6709 | dt: 1.31 ms, tokens/sec: 400195.61
+validation loss: 5.8633
+rank 2: sample 0: Hello, I'm a language model, however. I don’t see a few, the world, or a major reasons, and the government, it
+rank 2: sample 1: Hello, I'm a language model, because I remember, I think I see?
+One of a series was a new, the process of a series at
+rank 2: sample 2: Hello, I'm a language model, I am in a teacher. It doesn't just and in some of. We also I believe you were to ask it
+rank 2: sample 3: Hello, I'm a language model, but this time, the answer is to I hope this. In the first be done. On January 28, in January
+rank 3: sample 0: Hello, I'm a language model, and I” It I asked.<|endoftext|>I is in these two? Well, they could want our own life can
+rank 3: sample 1: Hello, I'm a language model, and we can be a variety for a good idea and more than we are.
+The number of a list that it
+rank 3: sample 2: Hello, I'm a language model, and the best problem so if all the book are actually used it is not not enough to get at least one time in
+rank 3: sample 3: Hello, I'm a language model, and making a problem, making clear, but the first of a little reason, was made that had one, but a
+rank 1: sample 0: Hello, I'm a language model, they need to be taken.
+With more people and have much more than.
+They can’s many people
+rank 1: sample 1: Hello, I'm a language model, the first day I, I would do some of the following the number of the highest is done I have been a few
+rank 1: sample 2: Hello, I'm a language model, but often in the world, and a lot of the day after I was said. I would I have a very powerful
+rank 1: sample 3: Hello, I'm a language model, I has a long, for a number) and I really has come. She is and just the same time of the
+rank 0: sample 0: Hello, I'm a language model, and the ability to be an active than is often the future. They of an important that makes an alternative.
+It
+rank 0: sample 1: Hello, I'm a language model, are different functions. This is to give a very more useful to have developed a new, that can't just with a
+rank 0: sample 2: Hello, I'm a language model, the fact a specific component on the potential of our bodies. If it is a person, the same ones. The case
+rank 0: sample 3: Hello, I'm a language model, that’s a ‘re said Dolicography/lumylitis – this approach to prevent that
+step  400 |  loss: 5.802586 | lr 3.3650e-04 | norm: 0.6761 | dt: 2.39 ms, tokens/sec: 219731.59
