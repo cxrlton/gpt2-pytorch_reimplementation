@@ -54,6 +54,14 @@ algorithm (cannot be found by torch.compile as flash attention is an algorithmic
 </p>
 * Changed vocab_size : 50257 -> 50304 (divisible by 2<sup>x</sup> ->   x = 1, ..., 7)
 
+## Results
+### For tinyshakespeare dataset:
+
+```
+Final Training Loss: 0.0373
+Final Validation Loss: 0.0372
+```
+
 ## Datasets Used
 * FineWeb-Edu[sample-10B tokens] https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu
 * tinyshakespeare https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
