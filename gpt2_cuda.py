@@ -240,60 +240,60 @@ class DataLoaderLite:
         self.num_processes = num_processes
         assert split in {'train', 'val'}
 
-        with open('input.txt', 'r') as f:
-            text = f.read()
-        enc = tiktoken.get_encoding('gpt2')
-        tokens = enc.encode(text)
-        self.tokens = torch.tensor(tokens)
-        print(f"Loaded {len(self.tokens)} tokens")
+    #     with open('input.txt', 'r') as f:
+    #         text = f.read()
+    #     enc = tiktoken.get_encoding('gpt2')
+    #     tokens = enc.encode(text)
+    #     self.tokens = torch.tensor(tokens)
+    #     print(f"Loaded {len(self.tokens)} tokens")
 
-        #state
-        self.current_position = self.B * self.T * self.process_rank
-
-    def next_batch(self):
-        B, T = self.B, self.T
-        buf = self.tokens[self.current_position:self.current_position + B*T + 1]
-        x = buf[:-1].view(B, T) #inputs
-        y = buf[1:].view(B, T) #targets
-        #advance the position in the tensor
-        self.current_position += B*T * self.num_processes
-        # if loading the next batch is out of bounds, reset the position
-        if (self.current_position + B*T*self.num_processes + 1) >= len(self.tokens):
-            self.current_position = self.B * self.T * self.process_rank
-        return x, y
-
-
-    #     #get shard filenames
-    #     data_root = "edu_fineweb10B"
-    #     shards = os.listdir(data_root)
-    #     shards = [s for s in shards if split in s] #filter out the shards that don't match the split
-    #     shards = sorted(shards)
-    #     shards = [os.path.join(data_root, s) for s in shards] #prepend the root path to the shard filenames
-    #     self.shards = shards
-    #     assert len(shards) > 0, f"no shards found for split {split}"
-    #     if master_process:
-    #         print(f"found {len(shards)} shards for split {split}") #print the number of shards found 
-    #     self.reset()
-
-    # def reset(self):    
-    #     #state, init at shard zero
-    #     self.current_shard = 0
-    #     self.tokens = load_tokens(self.shards[self.current_shard])
-    #     self.current_position = self.B * self.T * self.process_rank #start at the beginning of the shard
+    #     #state
+    #     self.current_position = self.B * self.T * self.process_rank
 
     # def next_batch(self):
     #     B, T = self.B, self.T
-    #     buf = self.tokens[self.current_position : self.current_position + B*T + 1]
-    #     x = (buf[:-1]).view(B, T) #inputs
-    #     y = (buf[1:]).view(B, T) #targets
-    #     #advance the position in the tensor 
-    #     self.current_position += B * T * self.num_processes
+    #     buf = self.tokens[self.current_position:self.current_position + B*T + 1]
+    #     x = buf[:-1].view(B, T) #inputs
+    #     y = buf[1:].view(B, T) #targets
+    #     #advance the position in the tensor
+    #     self.current_position += B*T * self.num_processes
     #     # if loading the next batch is out of bounds, reset the position
-    #     if self.current_position + (B * T * self.num_processes + 1) > len(self.tokens):
-    #         self.current_shard = (self.current_shard + 1) % len(self.shards)
-    #         self.tokens = load_tokens(self.shards[self.current_shard])
-    #         self.current_position = B * T * self.process_rank
+    #     if (self.current_position + B*T*self.num_processes + 1) >= len(self.tokens):
+    #         self.current_position = self.B * self.T * self.process_rank
     #     return x, y
+
+
+        #get shard filenames
+        data_root = "edu_fineweb10B"
+        shards = os.listdir(data_root)
+        shards = [s for s in shards if split in s] #filter out the shards that don't match the split
+        shards = sorted(shards)
+        shards = [os.path.join(data_root, s) for s in shards] #prepend the root path to the shard filenames
+        self.shards = shards
+        assert len(shards) > 0, f"no shards found for split {split}"
+        if master_process:
+            print(f"found {len(shards)} shards for split {split}") #print the number of shards found 
+        self.reset()
+
+    def reset(self):    
+        #state, init at shard zero
+        self.current_shard = 0
+        self.tokens = load_tokens(self.shards[self.current_shard])
+        self.current_position = self.B * self.T * self.process_rank #start at the beginning of the shard
+
+    def next_batch(self):
+        B, T = self.B, self.T
+        buf = self.tokens[self.current_position : self.current_position + B*T + 1]
+        x = (buf[:-1]).view(B, T) #inputs
+        y = (buf[1:]).view(B, T) #targets
+        #advance the position in the tensor 
+        self.current_position += B * T * self.num_processes
+        # if loading the next batch is out of bounds, reset the position
+        if self.current_position + (B * T * self.num_processes + 1) > len(self.tokens):
+            self.current_shard = (self.current_shard + 1) % len(self.shards)
+            self.tokens = load_tokens(self.shards[self.current_shard])
+            self.current_position = B * T * self.process_rank
+        return x, y
 
 # ----------------------------------------------------------------------------------------------------
 #DDP launch for e.g. 4 GPUs:
@@ -397,7 +397,7 @@ for step in range(max_steps):
     #once in a while evaluate validation loss
     if step % 25 == 0 or last_step:
         model.eval()
-        #val_loader.reset()
+        val_loader.reset()
         with torch.no_grad():
             val_loss_accum = 0.0
             val_loss_steps = 20
